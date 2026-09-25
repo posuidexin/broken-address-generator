@@ -1,0 +1,344 @@
+{
+  "meta": {
+    "source": "基于 data.gov.hk 公开资料及香港街道/楼宇公开资料整理",
+    "note": "香港本地邮递不使用邮编"
+  },
+  "districts": [
+    {
+      "zh": "中西區", "en": "Central and Western", "regionZh": "香港島", "regionEn": "Hong Kong Island",
+      "streets": [
+        {"zh": "皇后大道中", "en": "Queen's Road Central"},
+        {"zh": "皇后大道西", "en": "Queen's Road West"},
+        {"zh": "德輔道中", "en": "Des Voeux Road Central"},
+        {"zh": "干諾道中", "en": "Connaught Road Central"},
+        {"zh": "荷李活道", "en": "Hollywood Road"},
+        {"zh": "堅道", "en": "Caine Road"},
+        {"zh": "山頂道", "en": "Peak Road"},
+        {"zh": "卑路乍街", "en": "Belcher's Street"}
+      ],
+      "buildings": [
+        {"zh": "怡和大廈", "en": "Jardine House"},
+        {"zh": "中環中心", "en": "The Center"},
+        {"zh": "國際金融中心二期", "en": "Two International Finance Centre"},
+        {"zh": "交易廣場", "en": "Exchange Square"},
+        {"zh": "太古廣場", "en": "Pacific Place"}
+      ]
+    },
+    {
+      "zh": "灣仔區", "en": "Wan Chai", "regionZh": "香港島", "regionEn": "Hong Kong Island",
+      "streets": [
+        {"zh": "軒尼詩道", "en": "Hennessy Road"},
+        {"zh": "莊士敦道", "en": "Johnston Road"},
+        {"zh": "駱克道", "en": "Lockhart Road"},
+        {"zh": "告士打道", "en": "Gloucester Road"},
+        {"zh": "菲林明道", "en": "Fleming Road"},
+        {"zh": "杜老誌道", "en": "Tonnochy Road"},
+        {"zh": "怡和街", "en": "Yee Wo Street"},
+        {"zh": "皇后大道東", "en": "Queen's Road East"}
+      ],
+      "buildings": [
+        {"zh": "合和中心", "en": "Hopewell Centre"},
+        {"zh": "太古廣場三期", "en": "Three Pacific Place"},
+        {"zh": "灣仔政府大樓", "en": "Wanchai Tower"},
+        {"zh": "香港會議展覽中心", "en": "Hong Kong Convention and Exhibition Centre"}
+      ]
+    },
+    {
+      "zh": "東區", "en": "Eastern", "regionZh": "香港島", "regionEn": "Hong Kong Island",
+      "streets": [
+        {"zh": "英皇道", "en": "King's Road"},
+        {"zh": "筲箕灣道", "en": "Shau Kei Wan Road"},
+        {"zh": "柴灣道", "en": "Chai Wan Road"},
+        {"zh": "太古城道", "en": "Taikoo Shing Road"},
+        {"zh": "康山道", "en": "Kornhill Road"},
+        {"zh": "電廠街", "en": "Power Street"},
+        {"zh": "渣華道", "en": "Java Road"}
+      ],
+      "buildings": [
+        {"zh": "太古城", "en": "Tai Koo Shing"},
+        {"zh": "城市花園", "en": "City Garden"},
+        {"zh": "和富中心", "en": "Provident Centre"},
+        {"zh": "太古坊", "en": "Taikoo Place"},
+        {"zh": "康怡花園", "en": "Kornhill Gardens"}
+      ]
+    },
+    {
+      "zh": "南區", "en": "Southern", "regionZh": "香港島", "regionEn": "Hong Kong Island",
+      "streets": [
+        {"zh": "香港仔大道", "en": "Aberdeen Main Road"},
+        {"zh": "薄扶林道", "en": "Pok Fu Lam Road"},
+        {"zh": "黃竹坑道", "en": "Wong Chuk Hang Road"},
+        {"zh": "赤柱大街", "en": "Stanley Main Road"},
+        {"zh": "鴨脷洲橋道", "en": "Ap Lei Chau Bridge Road"},
+        {"zh": "淺水灣道", "en": "Repulse Bay Road"}
+      ],
+      "buildings": [
+        {"zh": "海怡半島", "en": "South Horizons"},
+        {"zh": "置富花園", "en": "Chi Fu Fa Yuen"},
+        {"zh": "華富邨", "en": "Wah Fu Estate"}
+      ]
+    },
+    {
+      "zh": "油尖旺區", "en": "Yau Tsim Mong", "regionZh": "九龍", "regionEn": "Kowloon",
+      "streets": [
+        {"zh": "彌敦道", "en": "Nathan Road"},
+        {"zh": "廣東道", "en": "Canton Road"},
+        {"zh": "西洋菜南街", "en": "Sai Yeung Choi Street South"},
+        {"zh": "太子道西", "en": "Prince Edward Road West"},
+        {"zh": "亞皆老街", "en": "Argyle Street"},
+        {"zh": "窩打老道", "en": "Waterloo Road"},
+        {"zh": "加連威老道", "en": "Granville Road"},
+        {"zh": "北京道", "en": "Peking Road"},
+        {"zh": "海防道", "en": "Haiphong Road"}
+      ],
+      "buildings": [
+        {"zh": "朗豪坊", "en": "Langham Place"},
+        {"zh": "維港灣", "en": "Park Avenue"},
+        {"zh": "帝柏海灣", "en": "Central Park"},
+        {"zh": "The ONE", "en": "The ONE"},
+        {"zh": "K11購物藝術館", "en": "K11 Arta"}
+      ]
+    },
+    {
+      "zh": "深水埗區", "en": "Sham Shui Po", "regionZh": "九龍", "regionEn": "Kowloon",
+      "streets": [
+        {"zh": "長沙灣道", "en": "Cheung Sha Wan Road"},
+        {"zh": "北河街", "en": "Pei Ho Street"},
+        {"zh": "福華街", "en": "Fuk Wa Street"},
+        {"zh": "大埔道", "en": "Tai Po Road"},
+        {"zh": "欽州街", "en": "Yen Chow Street"},
+        {"zh": "荔枝角道", "en": "Lai Chi Kok Road"},
+        {"zh": "南昌街", "en": "Nam Cheong Street"}
+      ],
+      "buildings": [
+        {"zh": "美孚新邨", "en": "Mei Foo Sun Chuen"},
+        {"zh": "西九龍中心", "en": "Dragon Centre"}
+      ]
+    },
+    {
+      "zh": "九龍城區", "en": "Kowloon City", "regionZh": "九龍", "regionEn": "Kowloon",
+      "streets": [
+        {"zh": "太子道東", "en": "Prince Edward Road East"},
+        {"zh": "土瓜灣道", "en": "To Kwa Wan Road"},
+        {"zh": "賈炳達道", "en": "Carpenter Road"},
+        {"zh": "聯合道", "en": "Junction Road"},
+        {"zh": "漆咸道北", "en": "Chatham Road North"},
+        {"zh": "馬頭圍道", "en": "Ma Tau Wai Road"}
+      ],
+      "buildings": [
+        {"zh": "黃埔花園", "en": "Whampoa Garden"},
+        {"zh": "又一城", "en": "Festival Walk"},
+        {"zh": "海逸豪園", "en": "Laguna Verde"}
+      ]
+    },
+    {
+      "zh": "黃大仙區", "en": "Wong Tai Sin", "regionZh": "九龍", "regionEn": "Kowloon",
+      "streets": [
+        {"zh": "龍翔道", "en": "Lung Cheung Road"},
+        {"zh": "彩虹道", "en": "Choi Hung Road"},
+        {"zh": "斧山道", "en": "Hammer Hill Road"},
+        {"zh": "蒲崗村道", "en": "Po Kong Village Road"},
+        {"zh": "鳳德街", "en": "Fung Tak Street"}
+      ],
+      "buildings": [
+        {"zh": "荷里活廣場", "en": "Plaza Hollywood"},
+        {"zh": "黃大仙中心", "en": "Temple Mall"},
+        {"zh": "星河明居", "en": "Galaxy City"}
+      ]
+    },
+    {
+      "zh": "觀塘區", "en": "Kwun Tong", "regionZh": "九龍", "regionEn": "Kowloon",
+      "streets": [
+        {"zh": "觀塘道", "en": "Kwun Tong Road"},
+        {"zh": "牛頭角道", "en": "Ngau Tau Kok Road"},
+        {"zh": "鴻圖道", "en": "Hung To Road"},
+        {"zh": "巧明街", "en": "How Ming Street"},
+        {"zh": "開源道", "en": "Hoi Yuen Road"},
+        {"zh": "將軍澳道", "en": "Tseung Kwan O Road"}
+      ],
+      "buildings": [
+        {"zh": "創紀之城", "en": "Millennium City"},
+        {"zh": "麗港城", "en": "Laguna City"},
+        {"zh": "德福花園", "en": "Telford Gardens"},
+        {"zh": "匯景花園", "en": "Sceneway Garden"}
+      ]
+    },
+    {
+      "zh": "葵青區", "en": "Kwai Tsing", "regionZh": "新界", "regionEn": "New Territories",
+      "streets": [
+        {"zh": "葵涌道", "en": "Kwai Chung Road"},
+        {"zh": "青山公路—葵涌段", "en": "Castle Peak Road – Kwai Chung"},
+        {"zh": "青衣路", "en": "Tsing Yi Road"},
+        {"zh": "擔杆山路", "en": "Tam Kon Shan Road"},
+        {"zh": "興芳路", "en": "Hing Fong Road"}
+      ],
+      "buildings": [
+        {"zh": "葵涌廣場", "en": "Kwai Chung Plaza"},
+        {"zh": "青衣城", "en": "Maritime Square"},
+        {"zh": "新都會廣場", "en": "Metroplaza"}
+      ]
+    },
+    {
+      "zh": "荃灣區", "en": "Tsuen Wan", "regionZh": "新界", "regionEn": "New Territories",
+      "streets": [
+        {"zh": "大河道", "en": "Tai Ho Road"},
+        {"zh": "楊屋道", "en": "Yeung Uk Road"},
+        {"zh": "沙咀道", "en": "Sha Tsui Road"},
+        {"zh": "海壩街", "en": "Hoi Pa Street"},
+        {"zh": "青山公路—荃灣段", "en": "Castle Peak Road – Tsuen Wan"}
+      ],
+      "buildings": [
+        {"zh": "荃灣廣場", "en": "Tsuen Wan Plaza"},
+        {"zh": "綠楊新邨", "en": "Luk Yeung Sun Chuen"},
+        {"zh": "如心廣場", "en": "Nina Tower"}
+      ]
+    },
+    {
+      "zh": "屯門區", "en": "Tuen Mun", "regionZh": "新界", "regionEn": "New Territories",
+      "streets": [
+        {"zh": "屯門鄉事會路", "en": "Tuen Mun Heung Sze Wui Road"},
+        {"zh": "青山公路—青山灣段", "en": "Castle Peak Road – Castle Peak Bay"},
+        {"zh": "龍門路", "en": "Lung Mun Road"},
+        {"zh": "屯興路", "en": "Tuen Hi Road"},
+        {"zh": "鳴琴路", "en": "Ming Kum Road"}
+      ],
+      "buildings": [
+        {"zh": "屯門市廣場", "en": "Tuen Mun Town Plaza"},
+        {"zh": "兆康苑", "en": "Siu Hong Court"},
+        {"zh": "華都花園", "en": "Waldorf Garden"}
+      ]
+    },
+    {
+      "zh": "元朗區", "en": "Yuen Long", "regionZh": "新界", "regionEn": "New Territories",
+      "streets": [
+        {"zh": "青山公路—元朗段", "en": "Castle Peak Road – Yuen Long"},
+        {"zh": "教育路", "en": "Kau Yuk Road"},
+        {"zh": "朗日路", "en": "Long Yat Road"},
+        {"zh": "元朗安寧路", "en": "Yuen Long On Ning Road"},
+        {"zh": "宏樂街", "en": "Wang Lok Street"}
+      ],
+      "buildings": [
+        {"zh": "新元朗中心", "en": "Sun Yuen Long Centre"},
+        {"zh": "形點", "en": "YOHO Mall"},
+        {"zh": "嘉湖山莊", "en": "Kingswood Villas"}
+      ]
+    },
+    {
+      "zh": "北區", "en": "North", "regionZh": "新界", "regionEn": "New Territories",
+      "streets": [
+        {"zh": "新豐路", "en": "San Fung Avenue"},
+        {"zh": "龍琛路", "en": "Lung Sum Avenue"},
+        {"zh": "馬會道", "en": "Jockey Club Road"},
+        {"zh": "百和路", "en": "Pak Wo Road"},
+        {"zh": "粉嶺車站路", "en": "Fanling Station Road"}
+      ],
+      "buildings": [
+        {"zh": "上水中心", "en": "Sheung Shui Centre"},
+        {"zh": "新都廣場", "en": "Metropolis Plaza"},
+        {"zh": "彩園廣場", "en": "Choi Yuen Plaza"}
+      ]
+    },
+    {
+      "zh": "大埔區", "en": "Tai Po", "regionZh": "新界", "regionEn": "New Territories",
+      "streets": [
+        {"zh": "廣福道", "en": "Kwong Fuk Road"},
+        {"zh": "大埔太和路", "en": "Tai Wo Road"},
+        {"zh": "汀角路", "en": "Ting Kok Road"},
+        {"zh": "寶湖道", "en": "Po Woo Road"},
+        {"zh": "安邦路", "en": "On Pong Road"}
+      ],
+      "buildings": [
+        {"zh": "大埔中心", "en": "Tai Po Centre"},
+        {"zh": "新達廣場", "en": "Uptown Plaza"},
+        {"zh": "大埔廣場", "en": "Tai Po Plaza"}
+      ]
+    },
+    {
+      "zh": "沙田區", "en": "Sha Tin", "regionZh": "新界", "regionEn": "New Territories",
+      "streets": [
+        {"zh": "沙田正街", "en": "Sha Tin Centre Street"},
+        {"zh": "大涌橋路", "en": "Tai Chung Kiu Road"},
+        {"zh": "沙田圍路", "en": "Sha Tin Wai Road"},
+        {"zh": "排頭街", "en": "Pai Tau Street"},
+        {"zh": "獅子山隧道公路", "en": "Lion Rock Tunnel Road"},
+        {"zh": "沙田鄉事會路", "en": "Sha Tin Rural Committee Road"}
+      ],
+      "buildings": [
+        {"zh": "新城市廣場", "en": "New Town Plaza"},
+        {"zh": "沙田第一城", "en": "City One Shatin"},
+        {"zh": "偉華中心", "en": "Wai Wah Centre"},
+        {"zh": "瀝源邨", "en": "Lek Yuen Estate"}
+      ]
+    },
+    {
+      "zh": "西貢區", "en": "Sai Kung", "regionZh": "新界", "regionEn": "New Territories",
+      "streets": [
+        {"zh": "寶琳北路", "en": "Po Lam Road North"},
+        {"zh": "景嶺路", "en": "King Ling Road"},
+        {"zh": "唐明街", "en": "Tong Ming Street"},
+        {"zh": "西貢大街", "en": "Sai Kung Hoi Pong Street"},
+        {"zh": "惠民路", "en": "Wai Man Road"}
+      ],
+      "buildings": [
+        {"zh": "將軍澳中心", "en": "Tseung Kwan O Centre"},
+        {"zh": "東港城", "en": "East Point City"},
+        {"zh": "將軍澳廣場", "en": "Tseung Kwan O Plaza"}
+      ]
+    },
+    {
+      "zh": "離島區", "en": "Islands", "regionZh": "新界", "regionEn": "New Territories",
+      "streets": [
+        {"zh": "東涌達東路", "en": "Tat Tung Road"},
+        {"zh": "東涌文東路", "en": "Man Tung Road"},
+        {"zh": "怡東路", "en": "Yi Tung Road"},
+        {"zh": "長洲新興街", "en": "Sun Hing Street"},
+        {"zh": "梅窩銀礦灣路", "en": "Silvermine Bay Road"}
+      ],
+      "buildings": [
+        {"zh": "東薈城", "en": "Citygate Outlets"},
+        {"zh": "海堤灣畔", "en": "Caribbean Coast"},
+        {"zh": "映灣園", "en": "Coastal Skyline"}
+      ]
+    }
+  ],
+  "surnames": [
+    {"zh": "陳", "roman": "Chan"}, {"zh": "李", "roman": "Lee"}, {"zh": "王", "roman": "Wong"},
+    {"zh": "張", "roman": "Cheung"}, {"zh": "劉", "roman": "Lau"}, {"zh": "周", "roman": "Chow"},
+    {"zh": "吳", "roman": "Ng"}, {"zh": "鄭", "roman": "Cheng"}, {"zh": "何", "roman": "Ho"},
+    {"zh": "馬", "roman": "Ma"}, {"zh": "梁", "roman": "Leung"}, {"zh": "謝", "roman": "Tse"},
+    {"zh": "林", "roman": "Lam"}, {"zh": "許", "roman": "Hui"}, {"zh": "麥", "roman": "Mak"},
+    {"zh": "盧", "roman": "Lo"}, {"zh": "蘇", "roman": "So"}, {"zh": "曾", "roman": "Tsang"},
+    {"zh": "鄧", "roman": "Tang"}, {"zh": "蔡", "roman": "Choi"}, {"zh": "潘", "roman": "Poon"},
+    {"zh": "袁", "roman": "Yuen"}, {"zh": "余", "roman": "Yu"}, {"zh": "馮", "roman": "Fung"},
+    {"zh": "郭", "roman": "Kwok"}, {"zh": "羅", "roman": "Law"}, {"zh": "胡", "roman": "Wu"},
+    {"zh": "朱", "roman": "Chu"}, {"zh": "高", "roman": "Ko"}, {"zh": "呂", "roman": "Lui"},
+    {"zh": "崔", "roman": "Chui"}, {"zh": "葉", "roman": "Ip"}, {"zh": "程", "roman": "Ching"},
+    {"zh": "邱", "roman": "Yau"}, {"zh": "侯", "roman": "Hau"}
+  ],
+  "maleNames": [
+    {"zh": "大文", "roman": "Tai Man"}, {"zh": "志偉", "roman": "Chi Wai"},
+    {"zh": "家豪", "roman": "Ka Ho"}, {"zh": "俊傑", "roman": "Chun Kit"},
+    {"zh": "文軒", "roman": "Man Hin"}, {"zh": "偉強", "roman": "Wai Keung"},
+    {"zh": "子明", "roman": "Tsz Ming"}, {"zh": "浩然", "roman": "Ho Yin"},
+    {"zh": "嘉樂", "roman": "Ka Lok"}, {"zh": "國棟", "roman": "Kwok Tung"},
+    {"zh": "永康", "roman": "Wing Hong"}, {"zh": "世傑", "roman": "Sai Kit"},
+    {"zh": "錦標", "roman": "Kam Biu"}, {"zh": "樹坤", "roman": "Shu Kwan"},
+    {"zh": "家俊", "roman": "Ka Chun"}, {"zh": "天佑", "roman": "Tin Yau"}
+  ],
+  "femaleNames": [
+    {"zh": "嘉欣", "roman": "Ka Yan"}, {"zh": "美玲", "roman": "Mei Ling"},
+    {"zh": "慧敏", "roman": "Wai Man"}, {"zh": "詠恩", "roman": "Wing Yan"},
+    {"zh": "雅文", "roman": "Nga Man"}, {"zh": "樂瑤", "roman": "Lok Yiu"},
+    {"zh": "淑儀", "roman": "Suk Yee"}, {"zh": "小芬", "roman": "Siu Fan"},
+    {"zh": "麗芳", "roman": "Lai Fong"}, {"zh": "心怡", "roman": "Sum Yi"},
+    {"zh": "芷晴", "roman": "Tsz Ching"}, {"zh": "可穎", "roman": "Ho Wing"},
+    {"zh": "詩詠", "roman": "Sze Wing"}, {"zh": "美儀", "roman": "Mei Yi"},
+    {"zh": "倩瑜", "roman": "Sin Yu"}, {"zh": "靜雯", "roman": "Ching Man"}
+  ],
+  "englishNamesMale": [
+    "Brian", "Kevin", "Eric", "Vincent", "Jacky", "Marco", "Gary", "Alan", "Ivan", "Ryan"
+  ],
+  "englishNamesFemale": [
+    "Emily", "Kitty", "Vivian", "Fiona", "Carmen", "Joyce", "Mandy", "Chloe", "Grace", "Zoe"
+  ]
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Broken 免费地址生成器 | 支持中国香港/日本/美国/新加坡</title>
+  <meta name="description" content="Broken 免费地址生成器面向软件研发、表单验证与自动化测试，支持中国香港、日本、美国、新加坡。结合公开地理资料与随机生成字段，纯前端运行，仅供测试使用。">
+  <meta name="keywords" content="地址生成器,虚拟地址生成器,测试地址,开发者工具,Broken,香港地址生成,日本地址生成,美国免税州地址,新加坡邮编,表单验证,测试数据">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Broken 免费地址生成器">
+  <meta property="og:description" content="支持香港、日本、美国、新加坡的测试地址生成工具。结合公开地理资料与随机字段，仅供研发测试使用。">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="assets/broken-logo.png">
+  <link rel="stylesheet" href="css/style.css?v=14">
+</head>
+<body data-v="12">
+  <div class="glow glow-a" aria-hidden="true"></div>
+  <div class="glow glow-b" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <img class="brand-mark" src="assets/broken-logo.png" alt="" width="52" height="52">
+        <h1 class="brand-name">Broken<em>免费地址生成器</em></h1>
+      </div>
+      <div class="country-switch" id="countryTabs" role="group" aria-label="选择国家或地区">
+        <button type="button" class="cs-btn active" data-country="hk" aria-pressed="true"><span class="flag">🇭🇰</span>香港</button>
+        <button type="button" class="cs-btn" data-country="jp" aria-pressed="false"><span class="flag">🇯🇵</span>日本</button>
+        <button type="button" class="cs-btn" data-country="us" aria-pressed="false"><span class="flag">🇺🇸</span>美国</button>
+        <button type="button" class="cs-btn" data-country="sg" aria-pressed="false"><span class="flag">🇸🇬</span>新加坡</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- 控制台 -->
+    <section class="console card">
+      <div class="ctrl">
+        <label for="regionSelect" id="regionLabel">地区</label>
+        <select id="regionSelect"></select>
+        <button type="button" id="taxFreeShortcut" class="tax-free-shortcut" aria-pressed="false" aria-describedby="taxFreeNote" hidden>免州销售税参考地区 · 5 州</button>
+        <p id="taxFreeNote" class="tax-free-note" hidden>AK / DE / MT / NH / OR 无州级一般销售税；部分地方仍可能征税。本筛选仅供计税规则测试，不代表实际订单免税。</p>
+      </div>
+      <div class="ctrl">
+        <label for="countInput">数量</label>
+        <div class="stepper">
+          <button type="button" id="countMinus" aria-label="减少">−</button>
+          <input type="number" id="countInput" min="1" max="50" value="1" title="单次生成 1 ~ 50 条测试数据" aria-label="生成数量（1至50条）">
+          <button type="button" id="countPlus" aria-label="增加">+</button>
+        </div>
+      </div>
+      <div class="ctrl ctrl-actions">
+        <button class="btn-primary" id="generateBtn">🎲 生成地址</button>
+        <button class="btn-ghost" id="copyAllBtn" title="一键复制当前全部生成结果">复制全部</button>
+      </div>
+    </section>
+
+    <!-- 当前地区指示条 -->
+    <section class="now-bar card" id="nowBar">
+      <div class="now-info">
+        <span class="now-flag" id="nowFlag">🇭🇰</span>
+        <div class="now-text">
+          <span class="now-cap">当前地区</span>
+          <strong class="now-region" id="nowRegion">香港 · 随机</strong>
+        </div>
+      </div>
+      <span class="now-hint" id="nowHint">选择地区后点击「生成地址」</span>
+    </section>
+
+    <!-- 结果区 -->
+    <section class="results" id="results">
+      <div class="empty" id="emptyHint">
+        <div class="empty-art">🗺️</div>
+        <p class="empty-title">选择目标地区，点击「生成地址」</p>
+        <p class="empty-sub">结合公开地理资料与随机字段生成 · 部分美国门牌来自公开地址集 · 仅供研发测试使用</p>
+      </div>
+    </section>
+
+    <!-- 收藏区 -->
+    <section class="card saved-panel" id="savedPanel" hidden>
+      <div class="saved-head">
+        <h2>⭐ 收藏夹 <span class="pill" id="savedCount">0</span></h2>
+        <div class="saved-actions">
+          <button class="mini" id="exportCsvBtn" title="导出收藏夹数据为 CSV 表格">导出 CSV</button>
+          <button class="mini" id="exportJsonBtn" title="导出收藏夹数据为 JSON 格式">导出 JSON</button>
+          <button class="mini danger" id="clearSavedBtn" title="清空全部已收藏的记录">清空</button>
+        </div>
+      </div>
+      <ul class="saved-list" id="savedList"></ul>
+    </section>
+
+    <!-- 使用须知与合规说明 -->
+    <section class="faq-card card">
+      <details class="faq-details">
+        <summary class="faq-summary">
+          <span class="faq-title">💡 使用须知与合规指引 (FAQ)</span>
+          <span class="faq-toggle-hint">点击展开 / 收起</span>
+        </summary>
+        <div class="faq-content">
+          <div class="faq-item">
+            <h3>1. 本站生成的数据是真实个人住址吗？</h3>
+            <p>本站不收集或提供特定个人的资料。生成记录用于软件测试，其中部分美国门牌地址以及各地区街道、邮编来自公开资料；姓名、电话等字段随机组合，<strong>可能与现实地址或号码巧合</strong>。请勿用于实际寄送、联系或身份验证。</p>
+          </div>
+          <div class="faq-item">
+            <h3>2. 适用的业务场景有哪些？</h3>
+            <p>仅适用于<strong>软件系统研发、国际化（i18n）地址字段兼容性测试、外贸与跨境电商结算表单校验、自动化 UI/API 测试用例构造、学术研究与教学演示</strong>等合法技术场景。</p>
+          </div>
+          <div class="faq-item">
+            <h3>3. 严格禁止的使用行为</h3>
+            <p><strong>严禁用于任何电信网络诈骗、虚假账单生成、恶意批量注册、冒用他人身份、洗钱、规避风控监管等违法违规行为。</strong>违者需自行承担由此产生的一切法律责任与法律后果，本平台坚决抵制任何滥用行为。</p>
+          </div>
+          <div class="faq-item">
+            <h3>4. 本站会收集或上传我的生成数据吗？</h3>
+            <p>本站没有接收生成记录的后端接口；地址生成、收藏和导出在当前浏览器中完成，收藏保存在本地存储（LocalStorage）。打开网页仍需向托管站点加载静态文件；点击外部资料链接时会访问相应网站。清除浏览器数据会移除本地收藏。</p>
+          </div>
+        </div>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-disclaimer">
+        <p><strong>使用说明：</strong>本工具为纯前端研发辅助工具，专供软件测试与教学验证。部分地址要素取自公开资料，随机生成的地址及号码也可能与真实信息重合；不得用于实际寄送、联系、身份验证、欺诈或冒用身份。使用者应遵守所在地法律法规。</p>
+      </div>
+      <div class="footer-sources">
+        <p class="src">公开数据来源：
+          <a href="https://www.post.japanpost.jp/zipcode/" target="_blank" rel="noopener">日本邮政 KEN_ALL</a> ·
+          <a href="https://github.com/geolonia/japanese-addresses-v2" target="_blank" rel="noopener">Geolonia 日本城市资料</a> ·
+          <a href="https://github.com/EthanRBrown/rrad" target="_blank" rel="noopener">rrad / OpenAddresses</a> ·
+          <a href="https://github.com/millbj92/US-Zip-Codes-JSON" target="_blank" rel="noopener">US-Zip-Codes-JSON</a> ·
+          <a href="https://data.gov.sg/datasets/d_17f5382f26140b1fdae0ba2ef6239d2f/view" target="_blank" rel="noopener">HDB Property Information</a> ·
+          <a href="https://github.com/xkjyeah/singapore-postal-codes" target="_blank" rel="noopener">OneMap 邮编资料</a> ·
+          <a href="https://data.gov.hk" target="_blank" rel="noopener">香港 DATA.GOV.HK</a>
+        </p>
+        <p class="src">包含新加坡建屋发展局（HDB）的 HDB Property Information 与 OneMap 邮编资料（2026 年 8 月获取），依据 <a href="https://data.gov.sg/open-data-licence" target="_blank" rel="noopener">Singapore Open Data Licence v1.0</a> 使用。日本城市罗马字取自 Geolonia 数据并作字段转换，依据 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a> 署名。美国邮编资料的 <a href="licenses/US-Zip-Codes-JSON-LICENSE.txt">MIT 许可声明</a>。以上数据提供方均未认可本站。</p>
+      </div>
+      <div class="footer-bottom">
+        <span>浏览器本地生成 · 不上传生成记录 · 仅供研发测试</span>
+        <span class="sep">|</span>
+        <span>Broken © 2026</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="js/generator.js?v=10"></script>
+  <script src="js/app.js?v=12"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+# 原始数据缓存与依赖（体积大，不入库）
+.cache/
+.zcode/
+dist/
+node_modules/
+assets/logo-concepts/
+*.local
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+# 系统文件
+Thumbs.db
+.DS_Store

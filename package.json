@@ -1,0 +1,14 @@
+{
+  "name": "broken-address-generator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "浏览器本地运行的免费地址测试数据生成器",
+  "scripts": {
+    "test": "node tools/smoke-test.mjs && node tools/dom-test.mjs",
+    "test:data": "node tools/validate-100.mjs",
+    "build": "node tools/package-release.mjs"
+  },
+  "devDependencies": {
+    "jsdom": "29.1.1"
+  }
+}
