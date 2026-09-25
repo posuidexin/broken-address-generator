@@ -11,6 +11,9 @@ if (path.dirname(dist) !== root || path.basename(dist) !== 'dist') {
 
 const files = [
   'index.html',
+  'robots.txt',
+  'sitemap.xml',
+  '681755064d119370c6a056bef4ef6128.txt',
   'css/style.css',
   'js/generator.js',
   'js/app.js',

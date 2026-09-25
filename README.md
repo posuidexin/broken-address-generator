@@ -1,5 +1,7 @@
 # Broken 免费地址生成器
 
+在线使用：[api.brokenalice.icu](https://api.brokenalice.icu/)
+
 基于各国政府公开数据与开源数据集的随机地址生成器，支持 **🇭🇰 香港 / 🇯🇵 日本 / 🇺🇸 美国 / 🇸🇬 新加坡**。
 纯静态网页，零构建、零后端、零运行时依赖，可直接部署到 GitHub Pages 或本地双击打开。
 
@@ -42,6 +44,7 @@
 
 ```
 ├── index.html          # 单页应用
+├── robots.txt / sitemap.xml # 搜索引擎发现入口
 ├── css/style.css
 ├── js/generator.js     # 核心生成器（纯函数）
 ├── js/app.js           # UI 交互
